@@ -1,0 +1,41 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #54001d;
+    padding: 20px 30px;
+    font-family: sans-serif;
+    border: 2px solid #54001d;
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+a::before {
+    content: 'hovered';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #a5a5d6;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(3);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+a:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
